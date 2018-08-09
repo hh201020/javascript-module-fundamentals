@@ -1,6 +1,17 @@
+'use strict';
 
-import { getName as getPlayerName, logPlayer} from './player.js';
-import * as scoreboard from './scoreboard.js';
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.getProblemCount = exports.setProblemCount = exports.calculateScore = exports.printGame = undefined;
+
+var _player = require('./player.js');
+
+var _scoreboard = require('./scoreboard.js');
+
+var scoreboard = _interopRequireWildcard(_scoreboard);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 // private members
 var factorElement = document.getElementById('factor');
@@ -8,7 +19,7 @@ var problemsPerGame = 3; // set default value
 
 function printGame() {
 
-    logPlayer();
+    (0, _player.logPlayer)();
 
     // determine the number of problems to show
     setProblemCount(document.getElementById('problemCount').value);
@@ -46,7 +57,7 @@ function calculateScore() {
 
     // create a new result object to pass to the scoreboard
     var result = {
-        name: getPlayerName(),
+        name: (0, _player.getName)(),
         score: score,
         problems: problemsInGame,
         factor: factorElement.value
@@ -68,4 +79,7 @@ function getProblemCount() {
     return problemsPerGame;
 }
 
-export { printGame, calculateScore, setProblemCount,getProblemCount } ;
+exports.printGame = printGame;
+exports.calculateScore = calculateScore;
+exports.setProblemCount = setProblemCount;
+exports.getProblemCount = getProblemCount;
