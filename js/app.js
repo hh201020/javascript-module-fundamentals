@@ -1,4 +1,4 @@
-(function() {
+define(['./player', './game'], function(player, game) {
     
     console.log('Starting MultiMath with an IIFE');
     
@@ -16,4 +16,4 @@
     // set the default number of problems
     document.getElementById('problemCount').value = game.getProblemCount();
     
-})();
+});
