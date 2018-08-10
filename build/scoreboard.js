@@ -1,3 +1,8 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
 console.log('Creating a scoreboard...');
 
@@ -25,7 +30,5 @@ function updateScoreboard() {
     scoresElement.innerHTML = output;
 }
 
-export {
-    addResult,
-    updateScoreboard
-}
+exports.addResult = addResult;
+exports.updateScoreboard = updateScoreboard;
