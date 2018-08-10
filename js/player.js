@@ -1,24 +1,15 @@
-define([], function() {
-    
-    // private members
-    var playerName = '';
-    
-    function logPlayer() {
-        console.log('The current player is ' + playerName + '.');
-    }
-    
-    function setName(newName) {
-        playerName = newName;
-    }
-    
-    function getName() {
-        return playerName;
-    }
-    
-    return {
-        logPlayer: logPlayer,
-        setName: setName,
-        getName: getName
-    };
-    
-});
+
+// private members
+var playerName = '';
+
+export function logPlayer() {
+    console.log('The current player is ' + playerName + '.');
+}
+
+export function setName(newName) {
+    playerName = newName;
+}
+
+export function getName() {
+    return playerName;
+}
